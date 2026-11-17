@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light">
+<title>醫療服務組｜交班與月會知識庫</title>
+<style>
+:root{--bg:#f6f8f7;--ink:#253c40;--muted:#708186;--main:#2c817c;--dark:#17635e;--mint:#e8f4ef;--line:#e0e9e6;--white:#fff;--warn:#a76922;--shadow:0 10px 30px #20483c0c;font-family:system-ui,-apple-system,"Microsoft JhengHei","Noto Sans TC",sans-serif;color:var(--ink)}*{box-sizing:border-box}body{margin:0;background:var(--bg)}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}header{background:#fff;border-bottom:1px solid var(--line)}.head{max-width:1320px;margin:auto;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:14px}.logo{width:52px;height:52px;border-radius:17px;background:var(--mint);display:grid;place-items:center;color:var(--dark);font-size:28px}.brand h1{font-size:22px;margin:0 0 3px}.brand p{font-size:13px;color:var(--muted);margin:0}.container{max-width:1320px;margin:28px auto;padding:0 26px}.hero{background:linear-gradient(110deg,#dff1e9,#edf5f4 75%,#f8f8ef);padding:28px 32px;border-radius:22px;display:flex;justify-content:space-between;align-items:center;gap:22px}.hero h2{font-size:26px;letter-spacing:.03em;margin:0 0 9px}.hero p{color:#5c7373;font-size:14px;margin:0;line-height:1.8}.hero .symbol{font-size:70px;opacity:.68}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:#fff;color:var(--ink);padding:11px 16px;border-radius:11px;font-weight:700;transition:.12s}.btn:hover{border-color:#87b8aa;background:#f6fbf8}.btn.primary{background:var(--main);border-color:var(--main);color:#fff}.btn.primary:hover{background:var(--dark)}.btn.small{padding:8px 11px;font-size:13px}.btn.danger{color:#a13745;border-color:#eed3d6}.layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:20px;margin-top:22px}.sidebar,.panel,.card,.detail{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.sidebar{padding:19px;height:fit-content}.side-title{color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.1em;margin:0 0 12px}.nav{width:100%;border:0;background:transparent;border-radius:11px;padding:13px;display:flex;justify-content:space-between;color:var(--ink);font-weight:650;text-align:left;margin-bottom:5px}.nav.active{background:var(--mint);color:var(--dark)}.num{font-size:12px;background:#f0f3f2;padding:3px 8px;border-radius:99px}.sidebar hr{border:0;border-top:1px solid var(--line);margin:20px 0}.hint{font-size:12px;color:var(--muted);line-height:1.9}.main{min-width:0}.panel{padding:21px;margin-bottom:17px}.searchrow{display:flex;align-items:center;gap:10px}.search{width:100%;padding:15px 18px;border:1px solid var(--line);border-radius:12px;outline:none;background:#fcfdfc;font-size:15px}.search:focus,select:focus,input:focus,textarea:focus{border-color:var(--main);outline:2px solid #2c817c18}.filters{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:13px}.filters select{border:1px solid var(--line);border-radius:10px;background:#fff;padding:9px 11px;color:var(--ink)}.filters .note{margin-left:auto;font-size:13px;color:var(--muted)}.result-top{display:flex;align-items:center;justify-content:space-between;margin:10px 2px 13px}.result-top h3{margin:0;font-size:17px}.result-top span{font-size:13px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:14px}.card{padding:19px;cursor:pointer;transition:transform .12s,border-color .12s}.card:hover{transform:translateY(-2px);border-color:#a3d1c4}.card h4{margin:12px 0 9px;font-size:17px;line-height:1.5;overflow-wrap:anywhere}.card p{font-size:13px;color:var(--muted);line-height:1.8;max-height:75px;overflow:hidden;white-space:pre-wrap;overflow-wrap:anywhere;margin:0}.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12px;color:var(--muted)}.chip{color:#277c68;background:#e5f5eb;border-radius:7px;padding:4px 8px;font-weight:800}.chip.meeting{color:#7564a0;background:#f1ebfc}.chip.other{color:#6c7882;background:#edf1f4}.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:18px;border-top:1px solid var(--line);padding-top:12px;font-size:12px;color:var(--muted)}.empty{text-align:center;border:1px dashed #c9dcd6;border-radius:18px;padding:60px 20px;background:#fff}.empty .big{font-size:50px}.empty h3{margin:15px 0 8px}.empty p{color:var(--muted);line-height:1.9}.foot{text-align:center;color:var(--muted);font-size:12px;margin:26px 0 40px}.modal{position:fixed;inset:0;background:#142b2db3;z-index:10;display:none;align-items:center;justify-content:center;padding:15px}.modal.show{display:flex}.dialog{background:#fff;border-radius:19px;max-width:750px;width:100%;max-height:90vh;overflow:auto;padding:25px;box-shadow:0 25px 70px #122a2b45}.dialog.wide{max-width:900px}.dialog-title{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}.dialog h2{margin:0 0 6px;font-size:22px}.close{background:#f1f5f3;border:0;border-radius:8px;padding:7px 12px;font-size:21px}.field{display:flex;flex-direction:column;gap:7px;margin-top:16px;font-size:14px;font-weight:700}.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:white;font-weight:400}.drop{border:2px dashed #9acabc;padding:24px;border-radius:15px;text-align:center;background:#f6fbf8;margin-top:18px;cursor:pointer}.drop.drag{background:#e4f4ed;border-color:var(--main)}.drop .big{font-size:34px}.drop p{font-size:13px;color:var(--muted);line-height:1.7}.status{margin-top:12px;max-height:170px;overflow:auto;font-size:13px;color:var(--muted);white-space:pre-wrap}.modal-actions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap;margin-top:22px}.detail-body{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.95;font-size:15px;border-top:1px solid var(--line);padding-top:18px;margin-top:16px;max-height:48vh;overflow:auto}.preview-frame{width:100%;height:60vh;min-height:350px;border:1px solid var(--line);border-radius:10px;background:white}.preview-image{display:block;max-width:100%;max-height:65vh;margin:auto;object-fit:contain}.preview-html{line-height:1.8;white-space:normal;overflow-wrap:anywhere}.preview-html table{border-collapse:collapse;width:100%;display:block;overflow:auto}.preview-html td,.preview-html th{border:1px solid #d8e4e0;padding:7px}.preview-html img{max-width:100%}.preview-message{font-size:13px;color:var(--muted);margin:8px 0 14px}.detail-body mark{background:#fff1b6;border-radius:2px}.notice{background:#fff8e9;border:1px solid #f1dfbc;border-radius:10px;padding:12px;font-size:13px;color:#84612b;line-height:1.7;margin-top:15px}.spinner{font-size:12px;color:var(--main)}.hidden{display:none!important}@media(max-width:800px){.head{padding:16px}.head .actions{justify-content:flex-end}.brand h1{font-size:17px}.brand p{font-size:11px}.logo{width:43px;height:43px}.container{padding:0 13px;margin-top:14px}.hero{padding:20px}.hero h2{font-size:21px}.hero .symbol{display:none}.layout{grid-template-columns:1fr}.sidebar{display:flex;flex-wrap:wrap;gap:7px;padding:11px}.side-title,.sidebar hr,.sidebar .hint{display:none}.nav{width:auto;flex:1;white-space:nowrap;margin:0;padding:10px}.panel{padding:13px}.filters .note{margin-left:0}.dialog{padding:17px}.btn{padding:9px 11px;font-size:13px}}
+</style>
+</head>
+<body>
+<header><div class="head"><div class="brand"><div class="logo">📖</div><div><h1>交班與月會知識庫</h1><p>醫療服務組｜讓交班資訊更容易查找</p></div></div><div class="actions"><button class="btn small" id="cloudStatus" title="雲端同步狀態（連線失敗時可點這裡重新輸入通關密碼）">⏳ 雲端連線中…</button><button class="btn" id="backupBtn">備份／還原</button><button class="btn primary" id="openImport">＋ 匯入檔案</button></div></div></header>
+<div class="container"><section class="hero"><div><h2>每一筆交班，都能完整查閱。</h2><p>完整顯示原始檔名（包含日期及括號編號）、補齊交班日期、獨立內容主題及全文搜尋、交班／月會分類、歷史資料查詢與原始檔案下載。<br>交班依日期自動拆分、各筆保留完整文字；支援 PDF 與截圖匯入（須先確認圖片內病人個資已遮蔽）。檔案會同步保存到雲端硬碟，大家看到的是同一份。</p></div><div class="symbol">🗂️</div></section>
+<div class="layout"><aside class="sidebar"><p class="side-title">內容分類</p><button class="nav active" data-cat="all">📚 全部資料 <span class="num" id="allCount">0</span></button><button class="nav" data-cat="handover">📝 交班紀錄 <span class="num" id="handoverCount">0</span></button><button class="nav" data-cat="meeting">📅 月會紀錄 <span class="num" id="meetingCount">0</span></button><button class="nav" data-cat="other">📁 其他資料 <span class="num" id="otherCount">0</span></button><hr><p class="side-title">使用說明</p><p class="hint">① 點選「匯入檔案」<br>② 選擇分類、加入檔案（檔名含「月會」者自動歸類月會紀錄）<br>③ 輸入關鍵字立即查詢<br>④ 點開結果查看內容或下載原件</p><div class="notice">☁️ 已開啟雲端同步：任何一台電腦匯入或刪除，其他人約 15 秒內就會看到。</div></aside>
+<main class="main"><div class="panel"><div class="searchrow"><input class="search" id="search" placeholder="🔍 搜尋交班內容、標題、檔名、日期…" autocomplete="off" aria-label="搜尋關鍵字"><button class="btn" id="clearSearch">清除</button></div><div class="filters"><select id="yearFilter" aria-label="年度"><option value="all">全部年度</option></select><select id="sortFilter" aria-label="排序"><option value="new">最近匯入</option><option value="old">最早匯入</option><option value="name">檔名排序</option></select><span class="note" id="searchNote">可輸入多個關鍵字，以空白分隔</span></div></div><div class="result-top"><h3 id="resultHeading">全部資料</h3><span id="resultCount">共 0 筆</span></div><div id="resultArea"></div></main></div><div class="foot">交班與月會知識庫 · 雲端同步版 · 資料存放於雲端硬碟</div></div>
+<div class="modal" id="importModal" role="dialog" aria-modal="true" aria-labelledby="importTitle"><div class="dialog"><div class="dialog-title"><div><h2 id="importTitle">📥 匯入交班資料</h2><div class="hint">可多選檔案，也可直接匯入 ZIP 壓縮檔</div></div><button class="close" data-close="importModal" aria-label="關閉">×</button></div><label class="field">資料分類<select id="importCategory"><option value="handover">交班紀錄</option><option value="meeting">月會紀錄</option><option value="other">其他資料</option></select></label><label class="field">年度（選填）<input id="importYear" placeholder="例：115、2026；留空將由檔名推測"></label><div class="drop" id="dropZone" tabindex="0" role="button"><div class="big">📂</div><strong>點這裡選取檔案，或拖曳檔案至此</strong><p>支援 PDF、截圖圖片（PNG/JPG/WEBP）、DOCX、DOC、TXT、ZIP 等。醫院系統畫面／截圖才進行個資遮蔽；一般圖片不遮蔽。PDF 及含圖片 Word 仍須先自行永久遮蔽。<br>也可儲存圖片或其他檔案，但未支援的格式無法全文搜尋。</p><input id="fileInput" type="file" multiple accept=".pdf,.docx,.txt,.csv,.html,.htm,.json,.md,.zip,.doc,.xlsx,.xls,.png,.jpg,.jpeg,.webp" hidden></div><label class="field" style="display:flex;flex-direction:row;align-items:flex-start;gap:10px;font-weight:500;line-height:1.7"><input type="checkbox" id="sensitiveReviewed" style="width:20px;min-width:20px;margin-top:4px">我已確認 PDF 及含圖片 Word 的病人個資已在原始檔永久遮蔽；圖片檔則會進入匯入前遮蔽檢查（不是僅加上可移除的覆蓋圖層）。</label><div class="notice">每張圖片匯入時先選擇「醫院程式畫面／含病人個資截圖」或「一般圖片」。只有前者執行個資遮蔽；一般圖片保留原貌。若無法確定圖片是否含病人資料，請選擇遮蔽流程。</div><div class="status" id="selectedStatus">尚未選擇檔案</div><div class="notice">個資保護：每次匯入前自動遮蔽可辨識的身分證字號、生日及標示為病人姓名的文字。含圖片的 Word、PDF、圖片檔等需人工確認已永久遮蔽後才能匯入；系統無法自動辨識圖片內個資，請先在原始檔永久遮蔽截圖中的病人資料，再另存為不含敏感資訊的 DOCX 或純文字。匯入 DOCX 時會先移除符合範例的姓名簽名表格；XLSX 會清空符合條件的上方姓名儲存格，並儲存處理後的檔案供預覽與下載。其他表格盡量保留。PDF 無法可靠修改原始頁面。PDF、DOCX、ZIP 及 Excel 解析需要網路載入程式庫；首次使用請保持連線。掃描式 PDF（只有圖片的文件）不支援辨識文字。舊式 .doc 匯入時會先透過本機轉換服務（需啟動隨附的轉換程式及安裝 LibreOffice）轉成 .docx，再擷取全文、表格及圖片預覽。若本機轉換服務未啟動，.doc 將不會匯入，避免產生內容不完整的紀錄。文件只在本機處理，不會傳到外部轉檔網站。</div><div class="modal-actions"><button class="btn" data-close="importModal">取消</button><button class="btn primary" id="runImport" disabled>開始匯入</button></div></div></div>
+<div class="modal" id="imageTypeModal" role="dialog" aria-modal="true"><div class="dialog"><h2>🖼️ 選擇圖片類型</h2><p class="hint" id="imageTypeName"></p><div style="text-align:center;max-height:48vh;overflow:auto;margin:14px 0"><img id="imageTypePreview" alt="即將匯入的圖片預覽" style="display:block;max-width:100%;max-height:45vh;object-fit:contain;margin:auto;border:1px solid var(--line);border-radius:10px"></div><p class="notice">請確認目前預覽的圖片（包含 Word 文件內嵌圖片）是否含有醫院系統畫面或病人個資。一般圖片不遮蔽；醫院截圖須先遮蔽。</p><div class="modal-actions"><button class="btn" id="imageTypeCancel">取消匯入此圖片</button><button class="btn" id="imageTypeGeneral">一般圖片（原樣匯入）</button><button class="btn primary" id="imageTypeHospital">醫院畫面／截圖（先去個資）</button></div></div></div>
+<div class="modal" id="redactionModal" role="dialog" aria-modal="true"><div class="dialog wide"><h2>🔒 圖片匯入前去個資</h2><p class="notice" id="redactStatus">正在辨識…</p><p class="hint">系統會嘗試辨識 OPD4100 等醫院畫面的病歷號、姓名、身分證字號與生日，並遮蔽欄位值。請逐一查看圖片，點擊仍有個資的區域可增加黑色遮蔽框（每次約 180 × 45 像素，依原圖比例）；完成後按「確認遮蔽並匯入」。若無法確認，請取消匯入。</p><div style="max-height:55vh;overflow:auto;text-align:center"><canvas id="redactCanvas" style="max-width:100%;height:auto;cursor:crosshair;border:1px solid #ccd"></canvas></div><div class="modal-actions"><button class="btn" id="redactCancel">取消此圖片匯入</button><button class="btn primary" id="redactApprove">確認遮蔽並匯入</button></div></div></div>
+<div class="modal" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="detailTitle"><div class="dialog wide"><div class="dialog-title"><div><div class="meta" id="detailMeta"></div><h2 id="detailTitle" style="overflow-wrap:anywhere;margin-top:10px"></h2></div><button class="close" data-close="detailModal" aria-label="關閉">×</button></div><div class="preview-message" id="previewMessage">可查看內容及下載原始檔。Word／Excel 預覽會隱藏可辨識的簽名格，原件不變。</div><div class="detail-body" id="detailBody"></div><div class="modal-actions"><button class="btn danger" id="deleteItem">刪除這筆</button><button class="btn" id="downloadItem">下載原始檔</button><button class="btn primary" data-close="detailModal">完成</button></div></div></div>
+<div class="modal" id="backupModal" role="dialog" aria-modal="true" aria-labelledby="backupTitle"><div class="dialog"><div class="dialog-title"><div><h2 id="backupTitle">💾 備份與還原</h2><p class="hint">換電腦或重新部署網頁前，請先匯出備份</p></div><button class="close" data-close="backupModal" aria-label="關閉">×</button></div><div class="notice">資料儲存在瀏覽器的 IndexedDB；無痕模式、清除網站資料、變更網址或更換電腦都可能使資料無法存取。建議定期備份。匯出的 ZIP 可能包含院內敏感文件，請妥善保管。</div><div class="modal-actions"><button class="btn primary" id="exportBackup">⬇ 匯出完整備份 ZIP</button><label class="btn" style="display:inline-block">⬆ 匯入備份 ZIP<input type="file" id="restoreInput" accept=".zip" hidden></label></div><div class="status" id="backupStatus"></div><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3>清空所有已匯入資料</h3><p class="hint">將刪除此瀏覽器知識庫內所有已匯入文件、搜尋文字與主題。刪除後無法復原，請先備份。</p><div style="margin-top:18px;padding:16px;border:1px solid var(--line);border-radius:12px;background:#fcfdfc">
+<h3 style="margin:0 0 8px">依年度清空資料</h3>
+<p class="hint">可依年度及內容分類精準刪除；其他年度、其他分類不受影響。年度不明的檔案不會自動刪除。</p>
+<label class="field" for="clearYearSelect">選擇要清空的年度
+<select id="clearYearSelect"><option value="">請選擇年度</option></select></label>
+<label class="field" for="clearCategorySelect">選擇要清空的內容分類
+<select id="clearCategorySelect">
+<option value="all">全部分類</option>
+<option value="handover">交班紀錄</option>
+<option value="meeting">月會紀錄</option>
+<option value="other">其他資料</option>
+</select></label>
+<p class="hint" id="clearYearCount">請先選擇年度。</p>
+<button class="btn danger" id="clearSelectedYear" disabled>🗑 清空選取年度資料</button>
+</div>
+<div style="margin-top:18px"><p class="hint">或清空本瀏覽器內所有年度的資料：</p><button class="btn danger" id="clearMeetingOnly">🗑 清空全部年度的月會紀錄</button><p class="hint">只刪除月會紀錄，交班紀錄與其他資料保留。建議先備份。</p><div style="margin-top:16px;padding:16px;border:1px solid var(--line);border-radius:12px">
+<h3>清理誤分類的月會檔案</h3><p class="hint">只找出目前分類為「交班紀錄」，但檔名含「月會」的資料（例如「115年度-月會記錄」）。不會刪除其他交班紀錄。</p><p class="hint" id="misfiledMeetingCount">正在檢查…</p><button class="btn danger" id="deleteMisfiledMeetings" disabled>🗑 刪除誤放在交班分類的月會檔案</button><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><h3>依分類清空全部年度資料</h3>
+<p class="hint">選擇要清空的分類，適用所有年度；不會刪除其他分類。</p>
+<label class="field" for="clearAllCategory">選擇內容分類
+<select id="clearAllCategory">
+<option value="">請選擇分類</option>
+<option value="handover">交班紀錄</option>
+<option value="meeting">月會紀錄</option>
+<option value="other">其他資料</option>
+<option value="all">全部分類（所有匯入檔案）</option>
+</select></label>
+<p class="hint" id="clearAllCount">請先選擇分類。</p>
+<button class="btn danger" id="clearAllItems" disabled>🗑 清空所選分類的全部年度資料</button></div></div></div></div>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const LIB={zip:'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js',docx:'https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.9.1/mammoth.browser.min.js',pdf:'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js',xlsx:'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js',ocr:'https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'};
+const loaded={};function loadScript(url){if(loaded[url])return loaded[url];loaded[url]=new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=url;s.onload=resolve;s.onerror=()=>{delete loaded[url];reject(new Error('無法載入文件解析程式庫，請確認網路是否連線'))};document.head.appendChild(s)});return loaded[url]}
+function dbOpen(){return new Promise((res,rej)=>{const q=indexedDB.open('handover_knowledge_v1',1);q.onupgradeneeded=()=>{const store=q.result.createObjectStore('items',{keyPath:'id'});store.createIndex('name','name')};q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error)})}
+let db,items=[],category='all',selectedFiles=[],activeId=null,previewUrl=null;
+function store(mode='readonly'){return db.transaction('items',mode).objectStore('items')}
+function req(r){return new Promise((res,rej)=>{r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})}
+async function consolidateSplitRecords(){
+ const all=await req(store().getAll());
+ const groups=new Map();
+ for(const x of all){
+  if(!x.parentId)continue;
+  if(!groups.has(x.parentId))groups.set(x.parentId,[]);
+  groups.get(x.parentId).push(x);
+ }
+ for(const [parentId,group] of groups){
+  group.sort((a,b)=>(a.sectionIndex||0)-(b.sectionIndex||0));
+  const first=group[0];
+  // Keep the already stored, privacy-processed document and rejoin all sections.
+  const combined=group.map(x=>x.text||'').join('\n\n');
+  const whole={...first,id:parentId,topic:first.name,text:combined,
+   contentTopic:contentTopicFor(combined,first.name),splitChecked:true};
+  delete whole.parentId;delete whole.sectionIndex;delete whole.sectionTotal;
+  const tx=db.transaction('items','readwrite'),os=tx.objectStore('items');
+  os.put(whole);
+  for(const x of group)os.delete(x.id);
+  await new Promise((resolve,reject)=>{tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)});
+ }
+}
+async function refresh(){
+ await migrateSplitEntries();
+ items=await req(store().getAll());
+ for(const x of items){
+  const topic=x.parentId?x.topic:x.name;
+  const contentTopic=x.contentTopic||contentTopicFor(x.text,x.name);if(x.topic!==topic||x.contentTopic!==contentTopic){x.topic=topic;x.contentTopic=contentTopic;await req(store('readwrite').put(x))}
+ }
+ render();
+ updateClearYearOptions();
+ updateClearAllCount();
+ scheduleCloudPush(); // ☁️ 資料有變就自動上傳
+}
+
+function dateContextFromName(name,yearHint=''){
+ const n=String(name||'');
+ const full=n.match(/(1\d{2}|20\d{2})[./年_-]\s*(1[0-2]|0?[1-9])(?:[./月_-]\s*(?:[12]?\d|3[01]))?/);
+ const y=full?Number(full[1]):(yearHint&&/^(?:1\d{2}|20\d{2})$/.test(yearHint)?Number(yearHint):null);
+ const m=full?Number(full[2]):null;
+ return {year:y,month:m};
+}
+function validDay(y,m,d){
+ if(!(m>=1&&m<=12&&d>=1&&d<=31))return false;
+ const gregorian=y&&y<200?y+1911:y;
+ return !gregorian||d<=new Date(gregorian,m,0).getDate();
+}
+function splitHandoverEntries(text,name='',yearHint=''){
+ const raw=String(text||'').replace(/\r/g,'');
+ const lines=raw.split('\n');
+ // First use the document's own date as the section marker. Referenced handover dates
+ // within the body must not create extra records.
+ const fileDate=String(name||'').match(/(?:^|[^\d])(1\d{2}|20\d{2})[.\/年_-]\s*(\d{1,2})[.\/月_-]\s*(\d{1,2})(?:日|[^\d]|$)/);
+ const starts=[];
+ if(fileDate){
+  const fy=Number(fileDate[1]),fm=Number(fileDate[2]),fd=Number(fileDate[3]);
+  const dateLine=/^\s*(?:(?:交班日期|日期)\s*[:：]\s*)?(1\d{2}|20\d{2})[.\/年-]\s*(\d{1,2})[.\/月-]\s*(\d{1,2})\s*日?\s*$/;
+  lines.forEach((line,i)=>{
+   const m=line.match(dateLine);
+   if(m&&Number(m[1])===fy&&Number(m[2])===fm&&Number(m[3])===fd)
+    starts.push({i,date:`${fy}/${String(fm).padStart(2,'0')}/${String(fd).padStart(2,'0')}`,year:String(fy)});
+  });
+ }
+ if(starts.length<2){
+  // Other documents: retain the original date-based fallback.
+  const dateLine=/^\s*(?:(?:交班日期|日期)\s*[:：]\s*)?(1\d{2}|20\d{2})[.\/年-]\s*(\d{1,2})[.\/月-]\s*(\d{1,2})\s*日?\s*$/;
+  if(!fileDate)lines.forEach((line,i)=>{const m=line.match(dateLine);if(m&&validDay(Number(m[1]),Number(m[2]),Number(m[3])))starts.push({i,date:`${m[1]}/${m[2].padStart(2,'0')}/${m[3].padStart(2,'0')}`,year:m[1]})});
+ }
+ if(starts.length<2)return [{text:raw,date:'',split:false}];
+ const result=[];
+ for(let j=0;j<starts.length;j++){
+  const begin=starts[j].i,end=j+1<starts.length?starts[j+1].i:lines.length;
+  const section=lines.slice(begin,end).join('\n').trim();
+  if(section.length>8)result.push({text:section,date:starts[j].date,year:starts[j].year,split:true});
+ }
+ return result.length>=2?result:[{text:raw,date:'',split:false}];
+}
+async function repairExistingSplitDates(){
+ const records=await req(store().getAll());
+ const groups=new Map();
+ for(const x of records)if(x.parentId){
+  if(!groups.has(x.parentId))groups.set(x.parentId,[]);
+  groups.get(x.parentId).push(x);
+ }
+ for(const group of groups.values()){
+  group.sort((a,b)=>(a.sectionIndex||0)-(b.sectionIndex||0));
+  const first=group[0];
+  const sections=group.map(x=>x.text).join('\n');
+  const parsed=splitHandoverEntries(sections,first.name,first.year);
+  if(parsed.length!==group.length)continue;
+  for(let i=0;i<group.length;i++){
+   const x=group[i],date=parsed[i].date;
+   if(date&&x.topic!==date){x.topic=date;await req(store('readwrite').put(x))}
+  }
+ }
+}
+async function migrateSplitEntries(){
+ const records=await req(store().getAll());
+ const groups=new Map();
+ for(const x of records)if(x.parentId){if(!groups.has(x.parentId))groups.set(x.parentId,[]);groups.get(x.parentId).push(x)}
+ for(const [parentId,group] of groups){
+  if(group.every(x=>x.splitVersion===3))continue;
+  group.sort((a,b)=>(a.sectionIndex||0)-(b.sectionIndex||0));
+  const first=group[0],full=group.map(x=>x.text||'').join('\n');
+  const parts=splitHandoverEntries(full,first.name,first.year);
+  if(parts.length<2)continue;
+  const tx=db.transaction('items','readwrite'),os=tx.objectStore('items');
+  for(const x of group)os.delete(x.id);
+  parts.forEach((part,i)=>os.put({...first,id:parentId+'_part_'+(i+1),text:part.text,topic:part.date+'｜第 '+(i+1)+' 筆',contentTopic:contentTopicFor(part.text,first.name),parentId,sectionIndex:i+1,sectionTotal:parts.length,splitVersion:3,splitChecked:true}));
+  await new Promise((resolve,reject)=>{tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)});
+ }
+ for(const x of records){
+  if(x.parentId||x.category!=='handover'||x.splitVersion===3)continue;
+  const parts=splitHandoverEntries(x.text,x.name,x.year);
+  if(parts.length>1){
+   const tx=db.transaction('items','readwrite'),os=tx.objectStore('items');
+   parts.forEach((part,i)=>os.put({...x,id:x.id+'_part_'+(i+1),text:part.text,topic:part.date+'｜第 '+(i+1)+' 筆',contentTopic:contentTopicFor(part.text,x.name),parentId:x.id,sectionIndex:i+1,sectionTotal:parts.length,splitVersion:3,splitChecked:true}));
+   os.delete(x.id);
+   await new Promise((resolve,reject)=>{tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)});
+  }else{ x.splitVersion=3;await req(store('readwrite').put(x)) }
+ }
+}
+
+function inferYear(name){const m=String(name).match(/(?:^|[^\d])(11[0-9]|10[0-9]|20[12]\d)(?:[^\d]|$)/);return m?m[1]:''}
+function topicFor(text,name){
+ const lines=String(text||'').split(/\r?\n/).map(x=>x.trim());
+ const first=lines.find(x=>x.length>=6&&x.length<=36&&!/^(日期|時間|簽名|簽收|姓名|交班人|接班人|第\s*\d+\s*頁)/.test(x));
+ const cleaned=String(name||'').split('/').pop().replace(/\.[^.]+$/,'').replace(/(?:^|[ _-])(11\d|20\d\d)[.\-_]?\d{0,2}/g,' ').replace(/(?:交班|月會|紀錄|記錄|附件|掃描|檔案)/g,' ').trim();
+ if(first && !/^[\d\s.()（）_-]+$/.test(first))return first; if(cleaned.length>=6&&cleaned.length<=36)return cleaned;
+ if(first)return first;
+ const rules=[['轉診與轉檢作業',/轉診|轉檢|轉入|轉出/],['掛號與初診作業',/掛號|初診|預約|停診/],['批價與收費作業',/批價|部分負擔|收據|繳費|費用/],['系統操作與異常處理',/系統|當機|程式|資訊室/],['零用金與帳務管理',/零用金|現金盤點|結帳/],['病歷與個資保護',/病歷|個資|隱私/],['急診作業與應變',/急診|大量傷患|消防/],['門診與檢查流程',/門診|檢查|抽血/]];
+ const match=rules.find(([,re])=>re.test(String(text||'').slice(0,2500)+' '+name));
+ return match?match[0]:(cleaned||String(name||'').replace(/\.[^.]+$/,'')||'未命名主題');
+}
+function contentTopicFor(text,name){
+ const raw=String(text||'').replace(/\r/g,'');
+ const lines=raw.split('\n').map(v=>v.replace(/\s+/g,' ').trim()).filter(Boolean);
+ const dateOnly=/^(?:\d{2,4}[./年-]\d{1,2}(?:[./月-]\d{1,2}日?)?(?:\s*(?:星期[一二三四五六日]|週[一二三四五六日]))?|(?:日期|時間|交班日期)[:：\s\d./年月日-]+)$/;
+ const noise=/^(?:第\s*\d+\s*頁|簽名|簽收|交班人|接班人|姓名|主旨|事項|說明|備註|公告|交班紀錄|月會紀錄|交班內容)\s*[:：]?$/;
+ const meaningful=lines.filter(v=>v.length>=5&&!dateOnly.test(v)&&!noise.test(v)&&!/^[\d\s.()（）:：/-]+$/.test(v)&&!/^【第\s*\d+\s*頁】/.test(v));
+ const rules=[
+ ['轉診與轉檢作業',/轉診|轉檢|轉入|轉出|電子轉診/],
+ ['掛號與初診作業',/掛號|初診|預約|停診|號碼牌/],
+ ['批價與收費作業',/批價|部分負擔|收據|繳費|欠費|費用/],
+ ['自助繳費機管理',/自助繳費|自繳機|繳費機/],
+ ['零用金與帳務管理',/零用金|盤點|結帳|溢收|短少/],
+ ['病歷與個資保護',/病歷|個資|隱私|診斷書/],
+ ['急診作業與應變',/急診|大量傷患|消防|演練/],
+ ['系統操作與異常處理',/系統|當機|程式|資訊室|權限/],
+ ['門診與檢查流程',/門診|檢查|抽血|報到/],
+ ['人員教育與行政宣導',/教育訓練|課程|排班|宣導|會議/]
+ ];
+ const sample=meaningful.slice(0,20).join(' ').slice(0,3500);
+ const scored=rules.map(([title,re])=>({title,score:(sample.match(new RegExp(re.source,'g'))||[]).length})).sort((a,b)=>b.score-a.score);
+ const category=scored[0]?.score?scored[0].title:'一般交班事項';
+ const heading=meaningful.find(v=>v.length>=7&&v.length<=44&&!/^(?:乙|鈺|俊|琦|惠|芷|婷|丁|諾|冠|麗|勇|芬|佩|文|婉|欣|莉)[\s\u3400-\u9fff]{15,}$/.test(v));
+ if(heading){
+  const h=heading.replace(/^(?:主旨|主題|事項|交班內容)[:：]\s*/,'').slice(0,36);
+  if(h.length>=7)return h;
+ }
+ return category;
+}
+function cleanSignatureText(t){
+ return String(t||'').split(/\r?\n/).filter(line=>!/^\s*(?:簽名|簽章|簽收|交班人簽名|接班人簽名|主管簽核|主管簽名|覆核簽名|簽名欄|簽收欄|簽名格)\s*[:：]?\s*[_＿─━-]*\s*$/.test(line.trim())).join('\n');
+}
+function removeSignatureBlocks(root){
+ // Remove the attendance/signature name grid shown at the top of imported documents.
+ root.querySelectorAll('table').forEach(table=>{
+  const rows=[...table.querySelectorAll('tr')];
+  const cells=[...table.querySelectorAll('td,th')];
+  const values=cells.map(c=>(c.textContent||'').replace(/\\s+/g,'').trim());
+  const nonempty=values.filter(Boolean);
+  const widest=Math.max(0,...rows.map(r=>r.querySelectorAll('td,th').length));
+  const shortNames=nonempty.filter(v=>/^[\\u3400-\\u9fff]{1,3}$/.test(v)).length;
+  const signatureLabel=/簽名|簽章|簽收|簽核|出席人員|簽到/.test((table.textContent||'').slice(0,300));
+  const nameGrid=widest>=8 && rows.length>=2 && nonempty.length>=12 && shortNames/nonempty.length>=0.78;
+  const emptySignature=signatureLabel && cells.length<=120 && (values.filter(v=>!v).length>=cells.length/4 || nonempty.length<20);
+  if(nameGrid||emptySignature)table.remove();
+ });
+ root.querySelectorAll('p').forEach(el=>{
+  if(/^(簽名|簽章|簽收|交班人簽名|接班人簽名|主管簽核|主管簽名|覆核簽名|簽名欄|簽收欄)[:：\\s]*$/.test((el.textContent||'').trim()))el.remove();
+ });
+}
+function label(c){return ({handover:'交班紀錄',meeting:'月會紀錄',other:'其他資料'})[c]||'其他資料'}
+function showModal(id){$(id).classList.add('show')};function hideModal(id){$(id).classList.remove('show');if(id==='detailModal'&&previewUrl){URL.revokeObjectURL(previewUrl);previewUrl=null;$('detailBody').replaceChildren()}}
+function terms(){return $('search').value.trim().toLowerCase().split(/\s+/).filter(Boolean)}
+function snippet(t,keywords){const text=String(t||'');if(!text)return '此檔案尚無可搜尋文字，可下載原始檔查看。';let pos=keywords.length?text.toLowerCase().indexOf(keywords[0]):-1;if(pos<0)pos=0;return (pos>50?'…':'')+text.slice(Math.max(0,pos-50),Math.max(0,pos-50)+180).replace(/\s+/g,' ')+(text.length>pos+180?'…':'')}
+function render(){const y=$('yearFilter').value;const years=[...new Set(items.map(x=>x.year).filter(Boolean))].sort((a,b)=>b.localeCompare(a,'zh-Hant',{numeric:true}));$('yearFilter').innerHTML='<option value="all">全部年度</option>'+years.map(t=>`<option value="${esc(t)}">${esc(t)} 年度</option>`).join('');$('yearFilter').value=years.includes(y)?y:'all';for(const c of ['all','handover','meeting','other'])$(c+'Count').textContent=c==='all'?items.length:items.filter(x=>x.category===c).length;document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.cat===category));$('resultHeading').textContent=category==='all'?'全部資料':label(category);const t=terms();let filtered=items.filter(x=>(category==='all'||x.category===category)&&($('yearFilter').value==='all'||x.year===$('yearFilter').value)&&t.every(w=>`${x.topic||x.name} ${x.contentTopic||''} ${x.name} ${x.year} ${x.text}`.toLowerCase().includes(w)));const sort=$('sortFilter').value;filtered.sort((a,b)=>sort==='name'?a.name.localeCompare(b.name,'zh-Hant'):sort==='old'?a.created-b.created:b.created-a.created);$('resultCount').textContent=`共 ${filtered.length} 筆`;if(!filtered.length){$('resultArea').innerHTML=`<div class="empty"><div class="big">${items.length?'🔎':'📭'}</div><h3>${items.length?'找不到符合條件的資料':'目前還沒有交班資料'}</h3><p>${items.length?'請調整關鍵字、年度或分類。':'點選右上角「匯入檔案」，開始建立可搜尋的交班知識庫。'}</p></div>`;return} $('resultArea').innerHTML='<div class="cards">'+filtered.map(x=>`<article class="card" data-id="${esc(x.id)}" tabindex="0" role="button"><div class="meta"><span class="chip ${x.category==='meeting'?'meeting':x.category==='other'?'other':''}">${label(x.category)}</span>${x.year?`<span>${esc(x.year)} 年</span>`:''}</div><h4>${esc(x.topic||x.name)}</h4><div style="font-weight:700;color:var(--dark);margin-bottom:7px">內容主題：${esc(x.contentTopic||contentTopicFor(x.text,x.name))}</div><div class="hint" style="overflow-wrap:anywhere">原始檔：${esc(x.name)}</div><p>${esc(snippet(x.text,t))}</p><div class="card-foot"><span>${new Date(x.created).toLocaleDateString('zh-TW')}</span><span>${x.ext.toUpperCase()} · 查看內容 →</span></div></article>`).join('')+'</div>';document.querySelectorAll('.card').forEach(c=>{c.addEventListener('click',()=>openDetail(c.dataset.id));c.addEventListener('keydown',e=>{if(e.key==='Enter')openDetail(c.dataset.id)})})}
+function highlight(s,words){if(!words.length)return esc(s);let out='',i=0;const lower=s.toLowerCase();while(i<s.length){let start=-1,w='';for(const term of words){const k=lower.indexOf(term,i);if(k>=0&&(start<0||k<start)){start=k;w=term}}if(start<0){out+=esc(s.slice(i));break}out+=esc(s.slice(i,start))+'<mark>'+esc(s.slice(start,start+w.length))+'</mark>';i=start+w.length}return out}
+async function openDetail(id){
+ const x=items.find(o=>o.id===id);if(!x)return;
+ if(previewUrl){URL.revokeObjectURL(previewUrl);previewUrl=null}
+ activeId=id;$('detailTitle').textContent=x.name;
+ $('detailMeta').innerHTML=`<span class="chip">${label(x.category)}</span><span>${esc(x.year||'未設定年度')}</span><span>${new Date(x.created).toLocaleString('zh-TW')}</span>`;
+ $('detailMeta').insertAdjacentHTML('beforeend',`${x.parentId?`<span class="chip">交班日期：${esc(x.topic)}</span>`:''}<span class="chip">內容主題：${esc(x.contentTopic||contentTopicFor(x.text,x.name))}</span>`);const body=$('detailBody'),message=$('previewMessage');body.replaceChildren();body.classList.remove('preview-html');message.textContent='正在載入文件預覽…';showModal('detailModal');
+ try{
+  if(!x.blob){message.textContent='正在從雲端下載原始檔…';await ensureBlob(x);message.textContent='正在載入文件預覽…'} // ☁️
+  const ext=x.ext.toLowerCase();
+  if(ext==='pdf'){
+   previewUrl=URL.createObjectURL(new Blob([x.blob],{type:'application/pdf'}));
+   const switcher=document.createElement('button');switcher.className='btn small';switcher.textContent='查看原始 PDF（含簽名欄）';
+   const textView=document.createElement('div');textView.innerHTML=highlight(cleanSignatureText(x.text||'無法擷取文字，請查看原始 PDF。'),terms());
+   const frame=document.createElement('iframe');frame.className='preview-frame hidden';frame.title='PDF 原件預覽';frame.src=previewUrl;
+   switcher.onclick=()=>{const original=frame.classList.contains('hidden');frame.classList.toggle('hidden',!original);textView.classList.toggle('hidden',original);switcher.textContent=original?'查看去除簽名欄的文字':'查看原始 PDF（含簽名欄）'};
+   body.append(switcher,textView,frame);
+   message.textContent='預設顯示可擷取的文字，並隱藏可辨識的簽名欄文字；原始 PDF 仍可切換查看與下載。';
+  }else if(['png','jpg','jpeg','gif','webp','bmp','svg'].includes(ext)){
+   previewUrl=URL.createObjectURL(x.blob);const img=document.createElement('img');img.className='preview-image';img.alt=x.name;img.src=previewUrl;body.append(img);message.textContent='圖片原件預覽';
+  }else if(ext==='docx'){
+   await loadScript(LIB.docx);const result=await mammoth.convertToHtml({arrayBuffer:await x.blob.arrayBuffer()});
+   const parsed=new DOMParser().parseFromString(result.value,'text/html');parsed.querySelectorAll('script,iframe,object,embed,form,style,link,meta').forEach(e=>e.remove());
+   parsed.querySelectorAll('*').forEach(e=>{for(const a of [...e.attributes]){if(a.name.startsWith('on')||['href','src','srcset','style'].includes(a.name)&&!(a.name==='src'&&e.tagName==='IMG'&&a.value.startsWith('data:image/')))e.removeAttribute(a.name)}});
+   body.classList.add('preview-html');removeSignatureBlocks(parsed.body);body.innerHTML=parsed.body.innerHTML||'<p>文件沒有可顯示的內容。</p>';
+   message.textContent='Word 內容預覽（已隱藏可辨識的簽名格；原始檔不變）。';
+  }else if(['xlsx','xls'].includes(ext)){
+   await loadScript(LIB.xlsx);const w=XLSX.read(await x.blob.arrayBuffer(),{type:'array'});body.classList.add('preview-html');
+   for(const name of w.SheetNames){const h=document.createElement('h3');h.textContent='工作表：'+name;body.append(h);const area=document.createElement('div');area.style.overflowX='auto';area.innerHTML=XLSX.utils.sheet_to_html(w.Sheets[name],{editable:false});area.querySelectorAll('a').forEach(a=>a.removeAttribute('href'));removeSignatureBlocks(area);body.append(area)}
+   message.textContent='Excel 工作表預覽（已隱藏可辨識的簽名格；原始檔不變）';
+  }else if(['txt','md','csv','json','html','htm'].includes(ext)){
+   const pre=document.createElement('div');pre.innerHTML=highlight(cleanSignatureText((x.text||await x.blob.text()).slice(0,500000)),terms());body.append(pre);message.textContent='文字內容預覽';
+  }else{
+   body.textContent=x.text||'此格式目前無法在網頁直接預覽，請下載原始檔開啟。';message.textContent='原件已保存，可按下方「下載原始檔」。';
+  }
+ }catch(e){body.textContent=x.text||'無法產生預覽，請下載原始檔。';message.textContent='預覽載入失敗：'+e.message}
+}
+
+function saveFile(blob,name){const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),10000)}
+function extractLegacyDocText(buffer){
+ // Best-effort extraction of readable runs from binary Word 97–2003 documents.
+ // This is not a full binary DOC parser; preserve the original file regardless.
+ const bytes=new Uint8Array(buffer), pieces=[];
+ const clean=t=>t.replace(/[\u0000-\u0008\u000b-\u001f\u007f-\u009f]/g,' ').replace(/[ \t]{2,}/g,' ').trim();
+ // Word legacy text is commonly stored as UTF-16LE runs or single-byte runs.
+ for(let i=0;i<bytes.length-24;){
+  if(bytes[i+1]===0&&bytes[i]>=32&&bytes[i]!==255){
+   let j=i, chars='';
+   while(j+1<bytes.length&&bytes[j+1]===0&&bytes[j]>=32&&bytes[j]!==255){
+    chars+=String.fromCharCode(bytes[j]);j+=2;
+   }
+   if(chars.length>=12)pieces.push({i,text:clean(chars)});
+   i=Math.max(i+1,j);
+  }else i++;
+ }
+ // Avoid treating container metadata as document text: only long readable runs.
+ const output=pieces.filter(x=>x.text.length>=12).map(x=>x.text).join('\n');
+ return output.length>=25?output:'';
+}
+async function extract(file){const name=file.name.toLowerCase();const ext=name.split('.').pop();if(['txt','md','csv','html','htm','json'].includes(ext)){let t=await file.text();if(['html','htm'].includes(ext)){const d=new DOMParser().parseFromString(t,'text/html');d.querySelectorAll('script,style').forEach(x=>x.remove());t=d.body?.textContent||''}return t}if(ext==='doc'){return extractLegacyDocText(await file.arrayBuffer())}if(ext==='docx'){await loadScript(LIB.docx);return (await mammoth.extractRawText({arrayBuffer:await file.arrayBuffer()})).value}if(ext==='pdf'){await loadScript(LIB.pdf);pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';const pdf=await pdfjsLib.getDocument({data:await file.arrayBuffer()}).promise;let text='';for(let i=1;i<=pdf.numPages;i++){const page=await pdf.getPage(i);const content=await page.getTextContent();text+=`\n【第 ${i} 頁】\n`+content.items.map(v=>v.str).join(' ')+'\n'}return text}if(['xlsx','xls'].includes(ext)){await loadScript(LIB.xlsx);const w=XLSX.read(await file.arrayBuffer(),{type:'array'});return w.SheetNames.map(s=>`【工作表：${s}】\n${XLSX.utils.sheet_to_csv(w.Sheets[s])}`).join('\n')}return ''}
+
+function looksLikeNameGrid(rows){
+ if(rows.length<2)return false;
+ const width=Math.max(...rows.map(r=>r.length),0);
+ const vals=rows.flat().map(v=>String(v??'').replace(/\s+/g,'').trim()).filter(Boolean);
+ if(width<8||vals.length<12)return false;
+ const short=vals.filter(v=>/^[\u3400-\u9fff]{1,3}$/.test(v)).length;
+ return short/vals.length>=.72;
+}
+async function prepareImportFile(file){
+ const ext=file.name.split('.').pop().toLowerCase();
+ if(ext==='docx'){
+  await loadScript(LIB.zip);
+  const zip=await JSZip.loadAsync(file);
+  const part=zip.file('word/document.xml');
+  if(!part)return {file,removed:0,note:'未找到 Word 主文件'};
+  const xml=new DOMParser().parseFromString(await part.async('string'),'application/xml');
+  if(xml.querySelector('parsererror'))throw Error('Word 文件 XML 無法解析');
+  const all=(node,name)=>[...node.getElementsByTagName('*')].filter(el=>el.localName===name);
+  const body=all(xml,'body')[0];
+  if(!body)return {file,removed:0};
+  const tables=[...body.children].filter(el=>el.localName==='tbl').slice(0,6);
+  let removed=0;
+  for(const tbl of tables){
+   const rows=all(tbl,'tr').map(tr=>[...tr.children].filter(el=>el.localName==='tc').map(tc=>all(tc,'t').map(n=>n.textContent).join('')));
+   if(looksLikeNameGrid(rows)){tbl.remove();removed++}
+  }
+  if(!removed)return {file,removed:0,note:'未偵測到符合圖片樣式的姓名格'};
+  zip.file('word/document.xml',new XMLSerializer().serializeToString(xml));
+  const blob=await zip.generateAsync({type:'blob',compression:'DEFLATE'});
+  return {file:new File([blob],file.name,{type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'}),removed};
+ }
+ if(ext==='xlsx'){
+  await loadScript(LIB.xlsx);
+  const book=XLSX.read(await file.arrayBuffer(),{type:'array',cellStyles:true});
+  let removed=0;
+  for(const sheetName of book.SheetNames){
+   const ws=book.Sheets[sheetName];
+   const rows=XLSX.utils.sheet_to_json(ws,{header:1,defval:'',blankrows:true}).slice(0,8);
+   if(!looksLikeNameGrid(rows.slice(0,2))&&!looksLikeNameGrid(rows.slice(0,3)))continue;
+   const range=XLSX.utils.decode_range(ws['!ref']);
+   for(let r=range.s.r;r<=Math.min(range.e.r,2);r++){
+    for(let c=range.s.c;c<=range.e.c;c++){
+     const key=XLSX.utils.encode_cell({r,c});
+     if(ws[key]){ws[key].v='';delete ws[key].w;delete ws[key].f}
+    }
+   }
+   removed++;
+  }
+  if(!removed)return {file,removed:0,note:'未偵測到符合圖片樣式的姓名格'};
+  const data=XLSX.write(book,{bookType:'xlsx',type:'array'});
+  return {file:new File([data],file.name,{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}),removed};
+ }
+ return {file,removed:0,note:ext==='pdf'?'PDF 無法安全自動刪除原始頁面格子，仍會保留原件':'此格式暫不支援匯入前修改'};
+}
+
+async function convertDocLocally(file){
+ const controller=new AbortController();
+ const timeout=setTimeout(()=>controller.abort(),120000);
+ try{
+  const response=await fetch('http://127.0.0.1:8765/convert',{
+   method:'POST',headers:{'Content-Type':'application/octet-stream','X-File-Name':encodeURIComponent(file.name)},
+   body:file,signal:controller.signal
+  });
+  if(!response.ok)throw Error((await response.text()).slice(0,300)||'轉檔失敗');
+  const result=await response.blob();
+  if(result.size<100||result.type==='text/html')throw Error('轉換結果無效');
+  return new File([result],file.name.replace(/\\.doc$/i,'.docx'),{type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+ }catch(e){throw Error('DOC 無法轉換：請先啟動「啟動DOC轉換服務.bat」，並確認電腦已安裝 LibreOffice。詳細原因：'+e.message)}
+ finally{clearTimeout(timeout)}
+}
+
+function redactPatientText(input){
+ let t=String(input||'');
+ t=t.replace(/\b[A-Z][12]\d{8}\b/gi,'**********');
+ t=t.replace(/((?:病人|患者|個案|病患)\s*(?:姓名|名稱)?\s*[:：]\s*)([^\s,，;；\n\r<]{2,12})/g,'$1＊＊＊');
+ t=t.replace(/((?:姓名)\s*[:：]\s*)([\u3400-\u9fff]{2,5})/g,'$1＊＊＊');
+ t=t.replace(/((?:出生日期|出生年月日|生日|出生年月|DOB|Date of Birth)\s*[:：]?\s*)(?:民國\s*)?(?:\d{2,4}[-/.年]\s*)?\d{1,2}[-/.月]\s*\d{1,2}(?:日)?/gi,'$1＊＊／＊＊／＊＊');
+ t=t.replace(/((?:出生日期|出生年月日|生日|DOB)\s*[:：]?\s*)\d{6,8}\b/gi,'$1********');
+ return t;
+}
+
+async function redactImageBeforeImport(file){
+ const ext=file.name.split('.').pop().toLowerCase();
+ if(!['png','jpg','jpeg','webp'].includes(ext))throw Error('圖片格式不支援去個資');
+ const img=await createImageBitmap(file);
+ const canvas=$('redactCanvas');canvas.width=img.width;canvas.height=img.height;
+ const ctx=canvas.getContext('2d',{willReadFrequently:true});
+ ctx.drawImage(img,0,0);img.close();
+ const status=$('redactStatus');
+ showModal('redactionModal');
+ status.textContent='正在執行本機 OCR 文字辨識，請稍候…';
+ let worker=null,recognized=0,masked=0;
+ const mask=(x,y,w,h)=>{
+  const pad=Math.max(7,Math.round(canvas.width*.008));
+  const left=Math.max(0,Math.floor(x-pad)),top=Math.max(0,Math.floor(y-pad));
+  ctx.fillStyle='#000';ctx.fillRect(left,top,Math.min(canvas.width-left,Math.ceil(w+2*pad)),Math.min(canvas.height-top,Math.ceil(h+2*pad)));masked++;
+ };
+ try{
+  await loadScript(LIB.ocr);
+  worker=await Tesseract.createWorker('chi_tra+eng');
+  const result=await worker.recognize(canvas);
+  const words=result.data.words||[];
+  const lines=result.data.lines||[];
+  // OPD4100 fields: use OCR labels to cover their adjacent values, not only OCR-detected numbers.
+  const labelSpecs=[
+   {re:/病歷號|病歷編號|病歷碼/,width:.19},
+   {re:/身分證|身份證|身分證號|身份證號/,width:.22},
+   {re:/出生日期|出生年月日|生日|DOB/i,width:.18},
+   {re:/^姓名$|病人姓名|患者姓名|病患姓名/,width:.18}
+  ];
+  const ocrBlocks=[...lines,...words];
+  for(const block of ocrBlocks){
+   const label=String(block.text||'').replace(/\s/g,'');
+   const spec=labelSpecs.find(x=>x.re.test(label));
+   if(!spec||!block.bbox)continue;
+   const b=block.bbox;
+   // Mask the value immediately to the right of the label; leave labels legible.
+   const left=b.x1+Math.max(2,Math.round(canvas.width*.003));
+   mask(left,b.y0-Math.max(3,Math.round(canvas.height*.006)),canvas.width*spec.width,Math.max(b.y1-b.y0,canvas.height*.038));
+   recognized++;
+  }
+  for(const line of lines){
+   const t=(line.text||'').replace(/\s/g,'');
+   const sensitive=/(?:姓名|病患|病人|患者|身分證|身份證|出生日期|生日|DOB|DateofBirth)/i.test(t)||/[A-Z][12]\d{8}/i.test(t);
+   if(!sensitive)continue;
+   const b=line.bbox;
+   if(!b)continue;
+   // Do not erase unrelated controls; protect the value area near the detected label.
+   mask(b.x1,b.y0,Math.max(canvas.width*.18,canvas.width*.24),Math.max(b.y1-b.y0,24));
+   recognized++;
+  }
+  for(const word of words){
+   if(/[A-Z][12]\d{8}/i.test((word.text||'').replace(/\s/g,''))&&word.bbox){
+    const b=word.bbox;mask(b.x0,b.y0,b.x1-b.x0,b.y1-b.y0);recognized++;
+   }
+  }
+  status.textContent=`辨識完成，已自動遮蔽 ${recognized} 個疑似個資區域。OCR 可能漏掉病歷號、姓名、生日或影像文字；請檢查整張圖片並手動補遮。`;
+ }catch(e){
+  status.textContent='自動辨識失敗（'+e.message+'）。請在圖片上手動遮蔽全部病人個資，或取消匯入。';
+ }finally{if(worker)await worker.terminate().catch(()=>{});}
+ const click=e=>{
+  const r=canvas.getBoundingClientRect();
+  const x=(e.clientX-r.left)*canvas.width/r.width,y=(e.clientY-r.top)*canvas.height/r.height;
+  mask(x-canvas.width*.1,y-canvas.height*.02,canvas.width*.2,Math.max(35,canvas.height*.04));
+  status.textContent='已新增手動遮蔽框。請繼續檢查整張圖片。';
+ };
+ canvas.addEventListener('click',click);
+ return await new Promise((resolve,reject)=>{
+  const approve=$('redactApprove'),cancel=$('redactCancel');
+  const cleanup=()=>{canvas.removeEventListener('click',click);approve.removeEventListener('click',yes);cancel.removeEventListener('click',no);hideModal('redactionModal')};
+  const no=()=>{cleanup();reject(Error('使用者取消圖片匯入'))};
+  const yes=()=>{
+   if(!confirm('已逐一確認整張圖片，所有病人姓名、身分證字號、生日及病歷號均已永久遮蔽？未遮蔽資料可能外洩。'))return;
+   canvas.toBlob(blob=>{if(!blob){cleanup();reject(Error('無法輸出遮蔽圖片'));return}
+    cleanup();resolve(new File([blob],file.name.replace(/\.(jpg|jpeg|webp)$/i,'.png'),{type:'image/png'}));
+   },'image/png');
+  };
+  approve.addEventListener('click',yes);cancel.addEventListener('click',no);
+ });
+}
+async function chooseImageImport(file){
+ $('imageTypeName').textContent='圖片：'+file.name;
+ const imagePreviewUrl=URL.createObjectURL(file);
+ $('imageTypePreview').src=imagePreviewUrl;
+ showModal('imageTypeModal');
+ const choice=await new Promise((resolve,reject)=>{
+  const a=$('imageTypeGeneral'),b=$('imageTypeHospital'),c=$('imageTypeCancel');
+  const done=(value)=>{a.onclick=b.onclick=c.onclick=null;hideModal('imageTypeModal');$('imageTypePreview').removeAttribute('src');URL.revokeObjectURL(imagePreviewUrl);resolve(value)};
+  a.onclick=()=>{if(confirm('確認此圖片不是醫院系統畫面，也沒有病人個資？一般圖片將保留原貌。'))done('general')};
+  b.onclick=()=>done('hospital');c.onclick=()=>done('cancel');
+ });
+ if(choice==='cancel')throw Error('已取消此圖片匯入');
+ return choice==='hospital'?await redactImageBeforeImport(file):file;
+}
+async function protectImportFile(file){
+ const ext=file.name.split('.').pop().toLowerCase();
+ if(['png','jpg','jpeg','webp'].includes(ext))return await chooseImageImport(file);
+  const reviewRequired=['pdf','gif','bmp','svg','xls','xlsx'];
+ if(reviewRequired.includes(ext)){if(!$('sensitiveReviewed').checked)throw Error('請先在原始檔永久遮蔽病人個資，並勾選人工檢查確認。');return file;}
+ if(ext==='docx'){
+  await loadScript(LIB.zip);
+  const zip=await JSZip.loadAsync(file);
+  const imageEntries=Object.keys(zip.files).filter(n=>/^word\/media\//i.test(n));
+  // Every embedded image is shown and reviewed, not silently imported.
+  for(let index=0;index<imageEntries.length;index++){
+   const entry=imageEntries[index],extension=entry.split('.').pop().toLowerCase();
+   if(!['png','jpg','jpeg','webp'].includes(extension)){
+    throw Error('Word 內含無法預覽的圖片格式：'+entry+'。請先在 Word 中處理後再匯入。');
+   }
+   const originalBlob=await zip.file(entry).async('blob');
+   const originalImage=new File([originalBlob],file.name+'｜圖片 '+(index+1)+'／'+imageEntries.length+'.'+extension,{type:extension==='png'?'image/png':extension==='webp'?'image/webp':'image/jpeg'});
+   const reviewed=await chooseImageImport(originalImage);
+   if(reviewed!==originalImage){
+    // Preserve the original media encoding to avoid breaking DOCX relationships.
+    const bitmap=await createImageBitmap(reviewed);
+    const canvas=document.createElement('canvas');canvas.width=bitmap.width;canvas.height=bitmap.height;
+    canvas.getContext('2d').drawImage(bitmap,0,0);bitmap.close();
+    const mime=extension==='png'?'image/png':extension==='webp'?'image/webp':'image/jpeg';
+    const encoded=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('圖片遮蔽輸出失敗')),mime,0.95));
+    zip.file(entry,encoded);
+   }
+  }
+  const part=zip.file('word/document.xml');
+  if(!part)throw Error('無法檢查 Word 文件內容');
+  const xml=new DOMParser().parseFromString(await part.async('string'),'application/xml');
+  if(xml.querySelector('parsererror'))throw Error('無法檢查 Word XML');
+  // Text in Word is split across runs. Mask paragraph-level text and rewrite as a single run
+  // only where sensitive values occur, preserving paragraphs and unaffected content.
+  const paras=[...xml.getElementsByTagName('*')].filter(x=>x.localName==='p');
+  for(const para of paras){
+   const nodes=[...para.getElementsByTagName('*')].filter(x=>x.localName==='t');
+   if(!nodes.length)continue;
+   const raw=nodes.map(n=>n.textContent).join('');
+   const safe=redactPatientText(raw);
+   if(raw!==safe){
+    nodes[0].textContent=safe;
+    for(let i=1;i<nodes.length;i++)nodes[i].textContent='';
+   }
+  }
+  // Additional XML parts can carry personal information, including comments and headers.
+  const unsafeParts=Object.keys(zip.files).filter(n=>/^word\/(header|footer|comments|footnotes|endnotes|embeddings|charts|diagrams|drawings)/i.test(n));
+  if(unsafeParts.length&&!$('sensitiveReviewed').checked)throw Error('文件含其他可能儲存個資的內容，請先檢查原始檔並勾選確認。');
+  zip.file('word/document.xml',new XMLSerializer().serializeToString(xml));
+  const blob=await zip.generateAsync({type:'blob',compression:'DEFLATE'});
+  return new File([blob],file.name,{type:file.type||'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+ }
+ if(['txt','md','csv','json'].includes(ext)){
+  return new File([redactPatientText(await file.text())],file.name,{type:file.type||'text/plain'});
+ }
+ throw Error('個資保護：不支援安全自動去識別化的格式（'+ext+'），已拒絕匯入。');
+}
+async function importOne(f,cat,year,displayName){
+ const id=(globalThis.crypto&&crypto.randomUUID)?crypto.randomUUID():Date.now()+'_'+Math.random();
+ const originalName=displayName||f.name;
+ const wasDoc=f.name.toLowerCase().endsWith('.doc');
+ if(wasDoc)f=await convertDocLocally(f);
+ f=await protectImportFile(f);
+ const ext=f.name.split('.').pop().toLowerCase();
+ const prepared=await prepareImportFile(f);f=prepared.file;
+ const text=redactPatientText(await extract(f));
+ const name=wasDoc?originalName.slice(0,-4)+'.docx':(f.name.toLowerCase().endsWith('.png')&&!originalName.toLowerCase().endsWith('.png')?originalName.replace(/\.[^.]+$/,'.png'):originalName);
+ const effectiveCat=/月\s*會/.test(name)?'meeting':cat;
+  const parts=effectiveCat==='handover'?splitHandoverEntries(text,name,year):[{text,split:false}];
+ for(let i=0;i<parts.length;i++){
+  const part=parts[i],split=parts.length>1;
+  const obj={id:split?id+'_part_'+(i+1):id,name,topic:split?(part.date+'｜第 '+(i+1)+' 筆'):name,
+   contentTopic:contentTopicFor(part.text,name),category:effectiveCat,year:year||part.year||inferYear(name),
+   ext,text:part.text,blob:f,created:Date.now()+i,splitChecked:true,splitVersion:3,
+   ...(split?{parentId:id,sectionIndex:i+1,sectionTotal:parts.length}:{})};
+  await req(store('readwrite').put(obj));
+ }
+ return {name,count:text.length,entries:parts.length,removed:prepared.removed,note:prepared.note};
+}
+async function importFiles(){if(!selectedFiles.length)return;const b=$('runImport');b.disabled=true;b.textContent='正在匯入…';const lines=[];const cat=$('importCategory').value,year=$('importYear').value.trim();let count=0;try{for(const f of selectedFiles){try{if(f.name.toLowerCase().endsWith('.zip')){await loadScript(LIB.zip);const z=await JSZip.loadAsync(f);const entries=Object.values(z.files).filter(v=>!v.dir&&!v.name.startsWith('__MACOSX/')&&!v.name.split('/').pop().startsWith('.'));for(const entry of entries){try{const blob=await entry.async('blob');const child=new File([blob],entry.name.split('/').pop(),{type:blob.type});const ans=await importOne(child,cat,year,entry.name);lines.push('✓ '+ans.name+(ans.entries>1?'（拆成 '+ans.entries+' 篇交班）':ans.removed?'（已移除 '+ans.removed+' 個姓名簽名表格）':ans.note?'（'+ans.note+'）':ans.count?'（已擷取文字）':'（僅保存原件）'));count++}catch(e){lines.push('✕ '+entry.name+'：'+e.message)}$('selectedStatus').textContent=lines.join('\n')}}else{const ans=await importOne(f,cat,year);lines.push('✓ '+ans.name+(ans.entries>1?'（拆成 '+ans.entries+' 篇交班）':ans.removed?'（已移除 '+ans.removed+' 個姓名簽名表格）':ans.note?'（'+ans.note+'）':ans.count?'（已擷取文字）':'（僅保存原件）'));count++}}catch(e){lines.push('✕ '+f.name+'：'+e.message)}$('selectedStatus').textContent=lines.join('\n')}await refresh();$('selectedStatus').textContent=`完成：成功匯入 ${count} 個檔案。\n`+lines.join('\n');if(!count)alert('沒有檔案成功匯入，請查看匯入明細。含截圖／PDF 文件須先勾選個資檢查確認。');if(count){selectedFiles=[];$('fileInput').value='';alert('匯入完成！\n成功匯入 '+count+' 筆檔案。'+(lines.some(v=>v.startsWith('✕'))?'\n部分檔案未成功，請查看匯入明細。':''));}}finally{b.textContent='開始匯入';b.disabled=!selectedFiles.length}}
+async function zipLib(){await loadScript(LIB.zip);return new JSZip()}
+async function exportData(){let msg=$('backupStatus');msg.textContent='備份製作中…';try{const missing=items.filter(x=>!x.blob);for(let i=0;i<missing.length;i++){if(missing[i].blob)continue;msg.textContent=`正在從雲端下載原始檔 ${i+1}/${missing.length}…`;await ensureBlob(missing[i])}const zip=await zipLib();const manifest=[];for(const x of items){const path='files/'+x.id+'_'+x.name.replace(/[\\/]/g,'_');zip.file(path,x.blob);manifest.push({id:x.id,name:x.name,topic:x.topic||topicFor(x.text,x.name),contentTopic:x.contentTopic||contentTopicFor(x.text,x.name),category:x.category,year:x.year,ext:x.ext,text:x.text,created:x.created,path})}zip.file('knowledge_backup.json',JSON.stringify({version:1,exported:new Date().toISOString(),items:manifest},null,2));const b=await zip.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:4}});saveFile(b,`交班知識庫備份_${new Date().toISOString().slice(0,10)}.zip`);msg.textContent=`已匯出 ${items.length} 筆，包含原始檔與搜尋文字。`}catch(e){msg.textContent='備份失敗：'+e.message}}
+async function restoreData(f){$('backupStatus').textContent='正在還原…';try{const z=await (await zipLib()).loadAsync(f);const file=z.file('knowledge_backup.json');if(!file)throw Error('這不是本系統匯出的備份 ZIP');const data=JSON.parse(await file.async('string'));if(data.version!==1||!Array.isArray(data.items))throw Error('備份格式不支援');let n=0;for(const x of data.items){const file=z.file(x.path);if(!file)continue;const blob=await file.async('blob');await req(store('readwrite').put({id:x.id,name:x.name,topic:x.topic||topicFor(x.text,x.name),contentTopic:x.contentTopic||contentTopicFor(x.text,x.name),category:x.category,year:x.year,ext:x.ext,text:x.text,created:x.created,blob:new File([blob],x.name)}));n++}await refresh();$('backupStatus').textContent=`還原完成：${n} 筆（同 ID 資料會覆蓋）。`}catch(e){$('backupStatus').textContent='還原失敗：'+e.message}}
+function updateClearYearOptions(){
+ const select=$('clearYearSelect');
+ if(!select)return;
+ const current=select.value;
+ const years=[...new Set(items.map(x=>String(x.year||'').trim()).filter(Boolean))]
+  .sort((a,b)=>b.localeCompare(a,'zh-Hant',{numeric:true}));
+ select.replaceChildren(new Option('請選擇年度',''),...years.map(y=>new Option(y+' 年度',y)));
+ select.value=years.includes(current)?current:'';
+ updateClearYearCount();
+}
+function clearSelection(){
+ const year=$('clearYearSelect').value;
+ const cat=$('clearCategorySelect').value;
+ const categoryName=cat==='all'?'全部分類':label(cat);
+ const matches=items.filter(x=>String(x.year||'').trim()===year&&(cat==='all'||x.category===cat));
+ return {year,cat,categoryName,matches};
+}
+function updateClearYearCount(){
+ const {year,categoryName,matches}=clearSelection();
+ $('clearYearCount').textContent=year?'將刪除 '+year+' 年度「'+categoryName+'」共 '+matches.length+' 筆；其他資料保留。':'請先選擇年度。';
+ $('clearSelectedYear').disabled=!year||matches.length===0;
+}
+async function clearSelectedYear(){
+ const {year,categoryName,matches}=clearSelection();
+ if(!year||!matches.length)return;
+ const description=year+' 年度「'+categoryName+'」的 '+matches.length+' 筆資料';
+ if(!confirm('確定刪除 '+description+' 嗎？其他年度及分類將保留。此操作無法復原。'))return;
+ const typed=prompt('請輸入「確認清空」以刪除 '+description+'：');
+ if(typed!=='確認清空')return;
+ try{
+  const tx=db.transaction('items','readwrite');
+  const obj=tx.objectStore('items');
+  for(const x of matches)obj.delete(x.id);
+  await new Promise((resolve,reject)=>{tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)});
+  await refresh();
+  $('backupStatus').textContent='已清空 '+description+'，其他資料已保留。';
+  alert('已完成：清空 '+description+'。');
+ }catch(e){alert('清空失敗：'+e.message)}
+}
+function misfiledMeetingRecords(){return items.filter(x=>x.category==='handover'&&/月\s*會/.test(x.name||''))}
+function updateMisfiledMeetingCount(){const matches=misfiledMeetingRecords();$('misfiledMeetingCount').textContent='找到 '+matches.length+' 筆檔名含「月會」、卻被放在「交班紀錄」的資料。';$('deleteMisfiledMeetings').disabled=!matches.length}
+async function deleteMisfiledMeetings(){
+ const matches=misfiledMeetingRecords();if(!matches.length)return;
+ const names=[...new Set(matches.map(x=>x.name))];
+ if(!confirm('以下 '+matches.length+' 筆資料將刪除（共 '+names.length+' 個來源檔案）：\n'+names.slice(0,25).join('\n')+(names.length>25?'\n…其餘 '+(names.length-25)+' 個檔案':'')+'\n\n其他交班紀錄會保留。確定嗎？'))return;
+ if(prompt('請輸入「刪除誤分類月會」確認：')!=='刪除誤分類月會')return;
+ try{const tx=db.transaction('items','readwrite'),os=tx.objectStore('items');for(const x of matches)os.delete(x.id);await new Promise((resolve,reject)=>{tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)});await refresh();alert('已刪除 '+matches.length+' 筆誤分類月會資料。其他交班紀錄已保留。')}
+ catch(e){alert('刪除失敗：'+e.message)}
+}
+function getClearAllSelection(){
+ const cat=$('clearAllCategory').value;
+ const names={handover:'交班紀錄',meeting:'月會紀錄',other:'其他資料',all:'全部分類'};
+ return {cat,name:names[cat]||'',matches:cat?(cat==='all'?items:items.filter(x=>x.category===cat)):[]};
+}
+function updateClearAllCount(){
+ const {cat,name,matches}=getClearAllSelection();
+ $('clearAllCount').textContent=cat?'將清空「'+name+'」全部年度共 '+matches.length+' 筆資料。':'請先選擇分類。';
+ $('clearAllItems').disabled=!cat||matches.length===0;
+}
+async function clearAllMeetingRecords(){
+ const matches=items.filter(x=>x.category==='meeting');
+ if(!matches.length){alert('目前沒有可清空的月會紀錄。');return}
+ if(!confirm('將刪除全部年度的 '+matches.length+' 筆月會紀錄，交班紀錄與其他資料不受影響。確定嗎？'))return;
+ if(prompt('請輸入「清空月會」確認刪除：')!=='清空月會')return;
+ try{
+  const tx=db.transaction('items','readwrite'),os=tx.objectStore('items');
+  for(const x of matches)os.delete(x.id);
+  await new Promise((resolve,reject)=>{tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)});
+  await refresh();
+  alert('已清空 '+matches.length+' 筆月會紀錄，可以重新匯入。');
+ }catch(e){alert('清空失敗：'+e.message)}
+}
+async function init(){if(!('indexedDB' in window)){alert('目前瀏覽器不支援本機資料儲存，建議改用新版 Chrome 或 Edge。');return}try{db=await dbOpen();await refresh()}catch(e){alert('無法開啟瀏覽器資料庫：'+e.message)}$('openImport').onclick=()=>showModal('importModal');$('backupBtn').onclick=()=>{updateClearYearOptions();updateClearAllCount();showModal('backupModal')};document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>hideModal(b.dataset.close)));document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)hideModal(m.id)}));document.querySelectorAll('.nav').forEach(n=>n.onclick=()=>{category=n.dataset.cat;render()});for(const id of ['search','yearFilter','sortFilter'])$(id).addEventListener(id==='search'?'input':'change',render);$('clearSearch').onclick=()=>{$('search').value='';render()};const drop=$('dropZone');drop.onclick=()=>$('fileInput').click();drop.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('fileInput').click()}};drop.ondragover=e=>{e.preventDefault();drop.classList.add('drag')};drop.ondragleave=()=>drop.classList.remove('drag');drop.ondrop=e=>{e.preventDefault();drop.classList.remove('drag');pick(e.dataTransfer.files)};$('fileInput').onchange=e=>pick(e.target.files);$('runImport').onclick=importFiles;$('downloadItem').onclick=async()=>{const x=items.find(x=>x.id===activeId);if(!x)return;try{if(!x.blob)await ensureBlob(x);saveFile(x.blob,x.name.split('/').pop())}catch(e){alert('下載失敗：'+e.message)}};$('deleteItem').onclick=async()=>{const x=items.find(x=>x.id===activeId);if(x&&confirm('確定刪除「'+x.name+'」？此操作無法復原，建議先備份。')){await req(store('readwrite').delete(x.id));hideModal('detailModal');await refresh()}};$('deleteMisfiledMeetings').onclick=deleteMisfiledMeetings;$('clearMeetingOnly').onclick=clearAllMeetingRecords;$('clearYearSelect').onchange=updateClearYearCount;$('clearCategorySelect').onchange=updateClearYearCount;$('clearSelectedYear').onclick=clearSelectedYear;$('clearAllCategory').onchange=updateClearAllCount;$('clearAllItems').onclick=async()=>{
+ if(!db){alert('資料庫尚未開啟');return}
+ const {cat,name,matches}=getClearAllSelection();
+ if(!cat||!matches.length)return;
+ if(!confirm('確定刪除「'+name+'」所有年度共 '+matches.length+' 筆資料嗎？其他分類將保留。此操作無法復原。'))return;
+ const typed=prompt('請輸入「確認清空」以刪除「'+name+'」全部年度資料：');
+ if(typed!=='確認清空')return;
+ try{
+  const tx=db.transaction('items','readwrite'),os=tx.objectStore('items');
+  for(const x of matches)os.delete(x.id);
+  await new Promise((resolve,reject)=>{tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)});
+  await refresh();
+  $('backupStatus').textContent='已清空「'+name+'」共 '+matches.length+' 筆資料。';
+  alert('已清空「'+name+'」共 '+matches.length+' 筆資料。');
+ }catch(e){alert('清空失敗：'+e.message)}
+ };
+ $('exportBackup').onclick=exportData;$('restoreInput').onchange=e=>{if(e.target.files[0])restoreData(e.target.files[0]);e.target.value=''};document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal.show').forEach(m=>hideModal(m.id))});cloudInit(true);setInterval(cloudPoll,CLOUD_POLL_SECONDS*1000)}
+function pick(f){selectedFiles=Array.from(f||[]);$('selectedStatus').textContent=selectedFiles.length?`已選擇 ${selectedFiles.length} 個檔案：\n`+selectedFiles.map(x=>x.name).join('\n'):'尚未選擇檔案';$('runImport').disabled=!selectedFiles.length}
+/* =====================================================================
+   ☁️ 雲端同步（Apps Script + 雲端硬碟）
+   ★ 只要改下面 CLOUD_API_URL 這一行：貼上 Apps Script 網頁應用程式網址
+   ===================================================================== */
+const CLOUD_API_URL='https://script.google.com/macros/s/這裡換成你的ID/exec';
+const CLOUD_POLL_SECONDS=15;   // 每幾秒檢查一次別人有沒有改
+
+let cloudReady=false,cloudBusy=false,cloudAgain=false,cloudTimer=null;
+let cloudVersion=-1,cloudSnap={},cloudFiles=new Set();
+
+const fileKeyOf=x=>x.fileKey||x.parentId||x.id;          // 同一份原始檔拆成多筆時共用一個 key
+function metaOf(x){const m={...x};delete m.blob;return m}   // 去掉原始檔，只留文字資料
+function canon(v){if(Array.isArray(v))return '['+v.map(canon).join(',')+']';if(v&&typeof v==='object')return '{'+Object.keys(v).sort().filter(k=>v[k]!==undefined).map(k=>JSON.stringify(k)+':'+canon(v[k])).join(',')+'}';return JSON.stringify(v===undefined?null:v)}
+function txDone(tx){return new Promise((res,rej)=>{tx.oncomplete=res;tx.onerror=()=>rej(tx.error);tx.onabort=()=>rej(tx.error)})}
+function blobToBase64(blob){return new Promise((res,rej)=>{const fr=new FileReader();fr.onload=()=>res(String(fr.result).split(',')[1]||'');fr.onerror=()=>rej(fr.error);fr.readAsDataURL(blob)})}
+
+// 通關密碼：第一次會問，之後記在這台電腦
+function cloudCode(ask){let c='';try{c=localStorage.getItem('kb_sync_code')||''}catch(e){}if(!c&&ask){c=(prompt('請輸入交班知識庫的「通關密碼」（向管理者索取）：')||'').trim();try{if(c)localStorage.setItem('kb_sync_code',c)}catch(e){}}return c}
+function forgetCode(){try{localStorage.removeItem('kb_sync_code')}catch(e){}}
+
+async function cloudGet(params){
+ const q=new URLSearchParams({...params,code:cloudCode(false),t:Date.now()});
+ const json=await (await fetch(CLOUD_API_URL+'?'+q)).json();
+ if(json.badCode){forgetCode();throw Error('通關密碼錯誤，請點這裡重新輸入')}
+ if(!json.ok)throw Error(json.error||'雲端回應錯誤');
+ return json;
+}
+async function cloudPost(body){
+ const json=await (await fetch(CLOUD_API_URL,{method:'POST',body:JSON.stringify({...body,code:cloudCode(false)})})).json();
+ if(json.badCode){forgetCode();throw Error('通關密碼錯誤，請點這裡重新輸入')}
+ if(!json.ok)throw Error(json.error||'雲端回應錯誤');
+ return json;
+}
+function saveKnown(){try{localStorage.setItem('kb_cloud_ids',JSON.stringify(Object.keys(cloudSnap)))}catch(e){}}
+
+// 比對「上次雲端的樣子」和「這台電腦現在的樣子」
+function diffLocal(local){
+ const upserts=[],deletes=[],ids=new Set();
+ for(const r of local){ids.add(r.id);const m=metaOf(r),s=cloudSnap[r.id];if(!s||canon(s)!==canon(m))upserts.push(m)}
+ for(const id in cloudSnap)if(!ids.has(id))deletes.push(id);
+ return {upserts,deletes};
+}
+
+// 把一份完整清單寫進這台電腦（已下載過的原始檔會保留）
+async function writeLocal(merged){
+ const local=await req(store().getAll());
+ const blobByKey=new Map();for(const r of local)if(r.blob)blobByKey.set(fileKeyOf(r),r.blob);
+ const byId=new Map(local.map(r=>[r.id,r]));
+ const tx=db.transaction('items','readwrite'),os=tx.objectStore('items');
+ for(const r of local)if(!merged[r.id])os.delete(r.id);
+ for(const id in merged){
+  const m=merged[id],old=byId.get(id),blob=(old&&old.blob)||blobByKey.get(fileKeyOf(m))||null;
+  if(!old||canon(metaOf(old))!==canon(m)||(!old.blob&&blob))os.put({...m,blob});
+ }
+ await txDone(tx);
+}
+
+// 第一次連線
+async function cloudInit(interactive){
+ if(!db)return;
+ if(!cloudCode(interactive)){setCloudStatus('bad','尚未輸入通關密碼，請點這裡');return}
+ try{
+  setCloudStatus('busy','連線雲端中…');
+  const c=await cloudGet({action:'index'});
+  const cloudItems=c.items||{},cloudCount=Object.keys(cloudItems).length;
+  const local=await req(store().getAll());
+  let known=null;try{const s=localStorage.getItem('kb_cloud_ids');if(s)known=new Set(JSON.parse(s))}catch(e){}
+  const remove=new Set();
+  const localOnly=local.filter(r=>!cloudItems[r.id]);
+  for(const r of localOnly)if(known&&known.has(r.id))remove.add(r.id);        // 別人已經刪掉的
+  const candidates=localOnly.filter(r=>!remove.has(r.id));                   // 這台電腦自己的、還沒上傳的
+  if(!known&&cloudCount&&candidates.length){
+   const ok=confirm(`雲端已經有 ${cloudCount} 筆資料。\n這台電腦另外還有 ${candidates.length} 筆本機資料。\n\n按「確定」：把這台電腦的資料也上傳，跟雲端合併。\n按「取消」：以雲端為準，清除這台電腦的本機資料（建議先按「備份／還原」匯出備份）。`);
+   if(!ok)candidates.forEach(r=>remove.add(r.id));
+  }
+  const merged={...cloudItems};
+  for(const r of local)if(!cloudItems[r.id]&&!remove.has(r.id))merged[r.id]=metaOf(r);
+  await writeLocal(merged);
+  cloudSnap=cloudItems;cloudVersion=c.version;cloudFiles=new Set(c.files||[]);
+  cloudReady=true;saveKnown();
+  await refresh();            // 重畫畫面；本機新資料會自動上傳
+  if(!cloudBusy)setCloudStatus('ok');
+ }catch(e){setCloudStatus('bad',e.message)}
+}
+
+function scheduleCloudPush(){if(!cloudReady)return;clearTimeout(cloudTimer);cloudTimer=setTimeout(cloudPush,800)}
+
+// 上傳：先傳原始檔，再傳文字資料
+async function cloudPush(){
+ if(!cloudReady)return;
+ if(cloudBusy){cloudAgain=true;return}
+ cloudBusy=true;
+ try{
+  const local=await req(store().getAll());
+  const fix=local.filter(r=>!r.fileKey);
+  if(fix.length){const tx=db.transaction('items','readwrite'),os=tx.objectStore('items');for(const r of fix){r.fileKey=fileKeyOf(r);os.put(r)}await txDone(tx)}
+  const {upserts,deletes}=diffLocal(local);
+  if(!upserts.length&&!deletes.length){setCloudStatus('ok');return}
+  const need=[...new Set(upserts.map(m=>m.fileKey))].filter(k=>!cloudFiles.has(k));
+  for(let i=0;i<need.length;i++){
+   const r=local.find(x=>x.fileKey===need[i]&&x.blob);if(!r)continue;
+   setCloudStatus('busy',`上傳原始檔 ${i+1}/${need.length}…`);
+   await cloudPost({action:'file',key:need[i],name:r.name.split('/').pop(),mime:r.blob.type||'',b64:await blobToBase64(r.blob)});
+   cloudFiles.add(need[i]);
+  }
+  const batches=[];let cur={upserts:[],deletes},size=0;      // 文字資料分批送，避免一次太大
+  for(const m of upserts){const s=JSON.stringify(m).length;if(size+s>3e6&&cur.upserts.length){batches.push(cur);cur={upserts:[],deletes:[]};size=0}cur.upserts.push(m);size+=s}
+  batches.push(cur);
+  for(let i=0;i<batches.length;i++){
+   setCloudStatus('busy',`同步資料 ${i+1}/${batches.length}…`);
+   const b=batches[i],res=await cloudPost({action:'ops',upserts:b.upserts,deletes:b.deletes});
+   const snap={...cloudSnap};for(const m of b.upserts)snap[m.id]=m;for(const id of b.deletes)delete snap[id];cloudSnap=snap;
+   (res.removedFiles||[]).forEach(k=>cloudFiles.delete(k));
+   cloudVersion=res.prevVersion===cloudVersion?res.version:-1;   // 中間有別人改 → 下次檢查時重新下載
+  }
+  saveKnown();setCloudStatus('ok');
+ }catch(e){setCloudStatus('bad',e.message)}
+ finally{cloudBusy=false;if(cloudAgain){cloudAgain=false;scheduleCloudPush()}}
+}
+
+// 每 15 秒檢查別人有沒有改
+async function cloudPoll(){
+ if(!db)return;
+ if(!cloudReady){if(cloudCode(false))cloudInit(false);return}
+ if(cloudBusy)return;
+ cloudBusy=true;
+ try{
+  const v=await cloudGet({action:'version'});
+  if(v.version!==cloudVersion){
+   setCloudStatus('busy','下載別人的更新…');
+   const c=await cloudGet({action:'index'});
+   const local=await req(store().getAll());
+   const {upserts,deletes}=diffLocal(local);              // 還沒上傳的修改先保留
+   const merged={...(c.items||{})};
+   for(const m of upserts)merged[m.id]=m;
+   for(const id of deletes)delete merged[id];
+   await writeLocal(merged);
+   cloudSnap=c.items||{};cloudVersion=c.version;cloudFiles=new Set(c.files||[]);saveKnown();
+   await refresh();
+  }
+  setCloudStatus('ok');
+ }catch(e){setCloudStatus('bad',e.message)}
+ finally{cloudBusy=false;if(cloudAgain){cloudAgain=false;scheduleCloudPush()}}
+}
+
+// 點開別人匯入的檔案時，才從雲端下載原始檔（下載一次就存在這台電腦）
+async function ensureBlob(x){
+ if(x.blob)return x.blob;
+ const key=fileKeyOf(x);
+ const f=await cloudGet({action:'file',key});
+ const bin=atob(f.b64),bytes=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+ const blob=new File([bytes],x.name.split('/').pop(),{type:f.mime||''});
+ const all=await req(store().getAll());
+ const tx=db.transaction('items','readwrite'),os=tx.objectStore('items');
+ for(const r of all)if(fileKeyOf(r)===key&&!r.blob){r.blob=blob;os.put(r)}
+ await txDone(tx);
+ for(const it of items)if(fileKeyOf(it)===key)it.blob=blob;
+ return blob;
+}
+
+function setCloudStatus(type,msg){
+ const el=$('cloudStatus');if(!el)return;
+ const t={ok:['☁️ 已同步','#e5f5eb','#277c68'],busy:['⏳ '+(msg||'同步中…'),'#fff8e9','#84612b'],bad:['⚠️ 雲端未連線','#fdecee','#a13745']}[type];
+ el.textContent=t[0];el.style.background=t[1];el.style.color=t[2];el.title=type==='bad'?(msg||'')+'（點這裡重新連線）':'雲端同步狀態';
+}
+$('cloudStatus').onclick=()=>{if(cloudReady&&!cloudBusy){cloudPoll();return}if(!cloudReady){forgetCode();cloudInit(true)}};
+
+init();
+</script>
+</body></html>
